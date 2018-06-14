@@ -1,0 +1,49 @@
+.woocommerce div.product form.cart {
+    margin-bottom: 2em;
+    margin-top: 2rem;
+}
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
+  background-color: $secondaryColor!important;
+}
+.woocommerce div.product form.cart .button{
+    background-color: $secondaryColor!important;
+}
+
+.woocommerce-page{
+  .page-content{
+    max-width: 1140px!important;
+    margin: auto!important;
+    margin-top: 40px!important;
+  }
+}
+.woocommerce .col-1 {
+    float: left;
+    width: 48%;
+    max-width: 48%!important;
+}
+.woocommerce .col-2 {
+    float: right;
+    width: 48%;
+    max-width: 48%!important;
+}
+.woocommerce div.product div.images .flex-control-thumbs{
+  margin-top: 25px;
+}
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
+  font-weight: normal!important;
+}
+
+
+@media only screen and (max-width: $screen-md-min) {
+  .woocommerce .col-1 {
+      float: left;
+      width: 100%;
+      max-width: 100%!important;
+  }
+  .woocommerce .col-2 {
+      float: right;
+      width: 100%;
+      max-width: 100%!important;
+  }
+}

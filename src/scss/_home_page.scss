@@ -1,0 +1,134 @@
+#header-bg {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 600px;
+	
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	#welcome {
+		text-align: center;
+		position: relative;
+		z-index: 20;
+
+		h1 {
+			margin: 0;
+			padding: 0;
+		}
+
+		p {
+			margin-bottom: 45px;
+
+			strong {
+				color: #FFF;
+			}
+		}
+	}
+}
+
+#header-bg:after {
+	content: " ";
+	z-index: 10;
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.6);
+}
+
+/* Film Strip Styles */
+.film-strip-static {
+	background: $primaryColor;
+
+	.container {
+		.row {
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			padding: 0;
+
+			.hover-img {
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 238px;
+			}
+
+			#image-one {
+				background: url(img/film-strip-imgs/car-1-bw.jpg);
+				&:hover {
+					background: url(img/film-strip-imgs/car-1-color.jpg);
+				}
+			}
+			#image-two {
+				background: url(img/film-strip-imgs/car-2-bw.jpg);
+				&:hover {
+					background: url(img/film-strip-imgs/car-2-color.jpg);
+				}
+			}
+			#image-three {
+				background: url(img/film-strip-imgs/car-3-bw.jpg);
+				&:hover {
+					background: url(img/film-strip-imgs/car-3-color.jpg);
+				}
+			}
+		}
+	}
+}
+/* End Film Strip Styles */
+
+/* Services Styles */
+.services {
+	.container {
+		.row {
+			h1 {
+				text-align: center;
+				width: 100%;
+			}
+
+			.col {
+				text-align: center;
+				padding-left: 30px;
+				padding-right: 30px;
+				img {
+					margin-bottom: 2.5rem;
+				}
+
+				h3 {
+					font-size: $h4FontSize;
+				}
+			}
+		}
+	}
+}
+/* End Services Styles */
+
+/* About Section */
+.about {
+	.container {
+		.row {
+			.col {
+				h1, h2, h3, p {
+					color: #FFF;
+				}
+			}
+		}
+	}
+}
+/* End About Section */
+
+/* Latest Project */
+.latest-project {
+	background: url(img/latest-project-bg.jpg) no-repeat;
+	background-size: cover;
+
+	h3, p, a:link, a:visited {
+		color: #FFF;
+	}
+}
+/* End Latest Project */
