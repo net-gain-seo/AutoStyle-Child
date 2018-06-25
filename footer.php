@@ -61,7 +61,7 @@
     <div class="col col-6"></div>
 </div>
 <div id="openNavOverlay"></div>
-
+<div id="closeNav" class="close-nav">Close <i class="fa fa-times"></i></button></div>
 <?php wp_footer(); ?>
 </div>
 
