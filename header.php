@@ -8,6 +8,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div id="closeNav" class="close-nav">Close <i class="fa fa-times"></i></button></div>
+<nav id="mainNav" class="mobile-nav" role="navigation">
+   <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
+</nav>
+
 <div id="bodyslide">
 	<header class="site-header">
 	    <div id="flexHeader" class="container flex-header padding0">
