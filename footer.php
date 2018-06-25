@@ -13,9 +13,9 @@
       <div class="row d-flex flex-row justify-content-between align-items-end padding40">
         <div class="col lg-4 col-md-5 col-sm-12 col-12 align-self-end">
           <div class="socialalign">
-            <a href="https://www.facebook.com/DocuVault-Delaware-Valley-LLC-142445592435008/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/FacebookIcon.png" class="socialicon" width="55"></a>
-            <a href="https://twitter.com/DocuVaultDV" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/TwitterIcon.png" class="socialicon" width="55"></a>
-            <a href="https://www.linkedin.com/company/984618/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/LinkedinIcon.png" class="socialicon" width="55"></a>
+            <a href="https://www.facebook.com/DocuVault-Delaware-Valley-LLC-142445592435008/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/FacebookIcon.png" class="socialicon" width="55"></a>
+            <a href="https://twitter.com/DocuVaultDV" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/TwitterIcon.png" class="socialicon" width="55"></a>
+            <a href="https://www.linkedin.com/company/984618/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/LinkedinIcon.png" class="socialicon" width="55"></a>
           </div>
 
           <div class="copyright">
