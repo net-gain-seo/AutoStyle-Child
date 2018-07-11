@@ -1,4 +1,18 @@
 <?php
+if ( ! function_exists( 'as_setup' ) ) :
+    function as_setup() {
+        /**
+         * Register navigation menus
+         *
+         * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
+         */
+        register_nav_menus( array( 'footer-menu' => 'Footer Menu' ) );
+
+
+    } // end setup function
+endif;
+add_action( 'after_setup_theme', 'as_setup' );
+
 function my_theme_enqueue_styles() {
 
     $parent_style = 'ns_main'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
