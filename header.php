@@ -33,6 +33,10 @@
 	        <div class="container padding0">
 	          <div class="stickylogo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="" width="370"></a></div>
 	            <div class="mobile-icons">
+                  <a href="https://www.google.ca/maps/place/Barrie,+ON/@44.3592406,-79.7357615,12z/data=!3m1!4b1!4m5!3m4!1s0x882aa3371ad7206d:0x1d2e0f00a84b535a!8m2!3d44.3893556!4d-79.6903316" target="_blank" class="nav-contact">
+                      <i class="fa fa-map-marker"></i>
+                      <span>MAP</span>
+                  </a>
 	                <a href="tel:18562904601" class="nav-phone">
 	                    <i class="fa fa-phone"></i>
 	                    <span>CALL</span>
