@@ -1,3 +1,13 @@
+.page-mast {
+    position: relative;
+    .mast-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 0;
+        transform: translate(-50%,-50%);
+    }
+}
 .redbanner{
   h2{
     margin-bottom: 1rem;
@@ -67,7 +77,6 @@
   }
 }
 .certsection{
-
   .validsection{
     padding-top: 20px;
     p{
@@ -305,18 +314,6 @@ ol li {
         height: 0;
         box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
         position: absolutel
-    }
-}
-.page-mast {
-    position: relative;
-
-    .mast-overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-
-        
     }
 }
 .valign-content {
