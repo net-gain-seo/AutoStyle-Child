@@ -3,11 +3,28 @@
     get_header();
 ?>
 <div class="mast page-mast">
-  <img src="http://209.126.119.193/~autostyle/wp-content/uploads/2018/03/page-header.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://209.126.119.193/~autostyle/wp-content/uploads/2018/03/page-header.jpg 2000w, http://209.126.119.193/~autostyle/wp-content/uploads/2018/03/page-header-300x53.jpg 300w, http://209.126.119.193/~autostyle/wp-content/uploads/2018/03/page-header-768x134.jpg 768w, http://209.126.119.193/~autostyle/wp-content/uploads/2018/03/page-header-1024x179.jpg 1024w" sizes="(max-width: 2000px) 100vw, 2000px" width="2000" height="350">
-
-  <div class="container mast-overlay">
-    <h1>Blog</h1>
-  </div>
+   <?php
+       if( has_post_thumbnail() ) {
+           the_post_thumbnail();
+       } else {
+           echo '<img src="'.get_stylesheet_directory_uri(). '/img/page-header.jpg" />';
+       }
+       $mast_title       = get_post_meta( get_the_ID(), 'mast_title', true );
+       $mast_description = get_post_meta( get_the_ID(), 'mast_description', true );
+   ?>
+   <div class="container mast-overlay">
+       <?php
+          if( !empty($mast_title) ) {
+              echo '<h1 class="titleText">'.$mast_title.'</h1>';
+          }
+          else{
+              echo '<h1 class="titleText">Blog</h1>';
+          }
+         if( !empty($mast_description) ) {
+             echo wpautop( $mast_description );
+         }
+       ?>
+   </div>
 </div>
 
 <div class="container-fluid  primaryBg"><div class="container">
@@ -39,20 +56,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             <?php endwhile; // End of the loop. ?>
             </div>
             <div class="blogpagination">
-  						<?php
-              global $wp_query;
-  						echo paginate_links( array(
-  							'base' => str_replace( 9999999, '%#%', esc_url( get_pagenum_link( 9999999 ) ) ),
-  							'format' => 'page/%#%/',
-  							'current' => max( 1, get_query_var('paged') ),
-  							'total' => $wp_query->max_num_pages,
-                'prev_text'          => __('<img src="https://docuvaultdv.com/wp-content/uploads/2017/12/left-arrow.jpg" class="dirarrow">'),
-                'next_text'          => __('<img src="https://docuvaultdv.com/wp-content/uploads/2017/12/right-arrow.jpg" class="dirarrow">'),
-  							'add_args'           => false
-  						) );
-  						?>
+              <div class="next-prev">
+                  <div class="prev"><?php previous_post_link('%link', '<i class="fa fa-angle-double-left"></i> <span>%title</span>', FALSE); ?></div>
+                  <div class="next"><?php next_post_link('%link', '<span>%title</span> <i class="fa fa-angle-double-right"></i>', FALSE); ?></div>
+              </div>
   					</div>
-
         </div>
 
         <div class="col col-12 col-lg-3">
@@ -64,7 +72,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         </div>
     </div>
 </div>
-<?php echo do_shortcode( '[common_element id="917"]' ); ?>
-
 <?php
     get_footer();
