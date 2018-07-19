@@ -344,9 +344,6 @@ ol li {
 .accordion-content {
     display: none;
     color: #000;
-    // max-height: 0;
-    // overflow: hidden;
-    // transition: max-height 0.75s ease-in-out;
     a {
         color: $primaryColor !important;
         &:hover {
@@ -354,9 +351,7 @@ ol li {
         }
     }
     &.open {
-        // display: block;
         margin-bottom: 2.5rem;
-        // max-height: 1000px;
     }
 }
 .border15 {
@@ -484,67 +479,6 @@ strong {
     }
 }
 
-@media only screen and (max-width: 1199px) {
-    .absolute-img {
-        display: none;
-    }
-}
-@media only screen and (max-width: 991px) {
-    .page-mast {
-        .mast-overlay {
-            position: relative;
-            transform: none;
-            top: 0;
-            left: 0;
-            margin-top: 20px;
-
-            br {
-                display: none;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .row {
-        .col-6 {
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin-bottom: 0;
-
-            &:first-child {
-                margin-bottom: 1rem;
-            }
-        }
-        &.halfbg,&.greenbluebg {
-            .col-6 {
-                flex: 0 1 50% !important;
-                margin-bottom: 0 !important;
-                max-width: 50% !important;
-            }
-        }
-        &.halfmap {
-            .col-6 {
-                flex: 0 1 100% !important;
-                margin-bottom: 0 !important;
-                max-width: 100% !important;
-
-                > div {
-                    max-width: 540px !important;
-                    margin: 0 auto;
-                }
-                + .col-6 {
-                    height: 480px;
-                }
-            }
-        }
-    }
-    .py5 {
-        padding-top: 1rem;
-    }
-
-}
-
 @media only screen and (max-width: 627px) {
     .row.halfbg {
         width: 100% !important;
@@ -563,35 +497,6 @@ strong {
         }
     }
 }
-
-@media only screen and (max-width: 575px) {
-    .services-horizontal {
-        .row {
-            margin: 0 15px;
-        }
-        .col-2 {
-            display: none;
-        }
-        .col-10 {
-            flex: 1 0 100%;
-            max-width: 100%;
-        }
-    }
-    .laws-resources {
-        > div {
-            text-align: center;
-        }
-        .col-2, .col-10 {
-            flex: 1 0 100%;
-            max-width: 100%;
-
-            img {
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
-
 @media only screen and (max-width: 350px) {
     .regulations {
         img {

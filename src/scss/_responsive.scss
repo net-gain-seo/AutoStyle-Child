@@ -42,11 +42,26 @@
   .servicesection .col-lg-4 {
       padding: 20px 20px 20px 20px;
   }
+  .absolute-img {
+      display: none;
+  }
 }
 
 @media only screen and (max-width: $screen-md-min) {
   .main-nav{
     display: none;
+  }
+  .page-mast {
+      .mast-overlay {
+          position: relative;
+          transform: none;
+          top: 0;
+          left: 0;
+          padding: 2.5rem 0px;
+          br {
+              display: none;
+          }
+      }
   }
   .col {
       *:last-child {
@@ -93,18 +108,18 @@
       top: 0px;
       width: 100%;
   }
-    .blog-sidebar {
-      margin: 10px 0 !important;
-    }
-    .splitpage .datespacing{
-      display: none;
-    }
-    .post_title {
-      position: relative;
-      top: 0;
-      padding: 20px 0px;
-      width: 100%;
-      background: #cc383c;
+  .blog-sidebar {
+    margin: 10px 0 !important;
+  }
+  .splitpage .datespacing{
+    display: none;
+  }
+  .post_title {
+    position: relative;
+    top: 0;
+    padding: 20px 0px;
+    width: 100%;
+    background: #cc383c;
   }
   #featured-image img {
       min-height: 0px;
@@ -170,148 +185,184 @@
       padding-right: 0px;
     }
   }
-    .contactpage div.wpcf7 {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    .padding50 {
-        padding: 50px 15px;
-    }
-    .padding25 {
-        padding: 25px 15px;
-    }
-    .padding20 {
-        padding: 20px 15px;
-    }
-    .padding0 {
-        padding: 0px 15px !important;
-    }
-    .absolutepadding0 .padding0 {
-        padding: 0px!important;
-    }
-    #menu-footer-menu {
-        float: none;
-        display: inline-block;
-        width: 100%;
-        text-align: left;
-    }
-    #page_sidebar {
-        background-color: #86888b;
-        padding: 40px 10px;
-        margin: 0px 0px;
-        margin-bottom: -40px;
-    }
-    .footer-left .textwidget, .footer-right .textwidget {
-        margin: auto;
-        text-align: left;
-    }
-    .darkbanner .Abouttitle {
-      color: white;
-      font-size: 4.5rem;
-      bottom: 0;
-      margin-bottom: 2rem!important;
-      position: relative!important;
-    }
-    .redbanner .col {
-        border-right: 0px solid white;
-        padding: 20px 0px;
-    }
-    .industriessection .col{
-        padding: 20px 0px;
-    }
-    footer .social .socialalign {
-        position: relative;
-        bottom: 10px;
-    }
-    .slider-content h1 {
-        font-weight: bold;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        text-align: center;
-        color: white;
-    }
-    .slider-content h2 {
-        margin-bottom: 1rem;
-    }
-    .slider-wrap .slider-content .inner-content {
-        padding: 20px;
-    }
-    .certifiedsection{
-      .pull-left, .pull-right{
-        float: none;
-        margin: auto;
-        display: block;
-      }
-    }
-    .splitpage {
-        overflow: hidden;
-        background-color: #555;
-        background: linear-gradient(to right, #555 0%, #555 100%, #CC383D 0%, #CC383D 0%);
-        .redhalf a {
-            position: relative;
-            bottom: inherit;
-        }
-    }
-    .splitpage .redhalf {
-        background-color: #CC383D;
-        padding: 40px 0px;
-    }
-    .testimonial-content {
-        width: 100%;
-    }
-    .splitpage .latestposts {
-        padding: 0px 0px 0px 0px;
-    }
-    .alignright, .alignleft{
-      margin: 0px!important;
-    }
-    .carousel-title{
-      margin-bottom: 0px!important;
-    }
-    .industriespage .imagebox {
-        width: 245px;
-        float: none;
-        margin-right: 70px;
-    }
-    .mobileredbackground{
-      display: block;
-      position: absolute;
-      left: -30%;
-      background-color: #cc383c;
-      height: 100%;
-      width: 2000%;
-      top: 0px;
-      z-index: 0;
-    }
-    .mobilecontainer{
-      display: block;
+  .contactpage div.wpcf7 {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+  }
+  .padding50 {
+      padding: 50px 15px;
+  }
+  .padding25 {
+      padding: 25px 15px;
+  }
+  .padding20 {
+      padding: 20px 15px;
+  }
+  .padding0 {
+      padding: 0px 15px !important;
+  }
+  .absolutepadding0 .padding0 {
+      padding: 0px!important;
+  }
+  #menu-footer-menu {
+      float: none;
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+  }
+  #page_sidebar {
+      background-color: #86888b;
+      padding: 40px 10px;
+      margin: 0px 0px;
+      margin-bottom: -40px;
+  }
+  .footer-left .textwidget, .footer-right .textwidget {
+      margin: auto;
+      text-align: left;
+  }
+  .darkbanner .Abouttitle {
+    color: white;
+    font-size: 4.5rem;
+    bottom: 0;
+    margin-bottom: 2rem!important;
+    position: relative!important;
+  }
+  .redbanner .col {
+      border-right: 0px solid white;
+      padding: 20px 0px;
+  }
+  .industriessection .col{
+      padding: 20px 0px;
+  }
+  footer .social .socialalign {
       position: relative;
-      z-index: 20;
+      bottom: 10px;
+  }
+  .slider-content h1 {
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: white;
+  }
+  .slider-content h2 {
+      margin-bottom: 1rem;
+  }
+  .slider-wrap .slider-content .inner-content {
+      padding: 20px;
+  }
+  .certifiedsection{
+    .pull-left, .pull-right{
+      float: none;
+      margin: auto;
+      display: block;
     }
-    .mobilelineheight{
-      line-height: 1;
-    }
-    .PageSummary .row{
-        padding: 20px 0px;
-    }
-    .post_title {
-        padding-bottom: 0px;
-        h1{
-          line-height: 1;
-        }
-    }
-    .row {
-        padding: 20px 0px;
-    }
-    .single-post .blog-sidebar {
-        padding: 40px 25px;
-        margin: 20px 0 !important;
-        overflow: hidden;
-    }
+  }
+  .splitpage {
+      overflow: hidden;
+      background-color: #555;
+      background: linear-gradient(to right, #555 0%, #555 100%, #CC383D 0%, #CC383D 0%);
+      .redhalf a {
+          position: relative;
+          bottom: inherit;
+      }
+  }
+  .splitpage .redhalf {
+      background-color: #CC383D;
+      padding: 40px 0px;
+  }
+  .testimonial-content {
+      width: 100%;
+  }
+  .splitpage .latestposts {
+      padding: 0px 0px 0px 0px;
+  }
+  .alignright, .alignleft{
+    margin: 0px!important;
+  }
+  .carousel-title{
+    margin-bottom: 0px!important;
+  }
+  .industriespage .imagebox {
+      width: 245px;
+      float: none;
+      margin-right: 70px;
+  }
+  .mobileredbackground{
+    display: block;
+    position: absolute;
+    left: -30%;
+    background-color: #cc383c;
+    height: 100%;
+    width: 2000%;
+    top: 0px;
+    z-index: 0;
+  }
+  .mobilecontainer{
+    display: block;
+    position: relative;
+    z-index: 20;
+  }
+  .mobilelineheight{
+    line-height: 1;
+  }
+  .PageSummary .row{
+      padding: 20px 0px;
+  }
+  .post_title {
+      padding-bottom: 0px;
+      h1{
+        line-height: 1;
+      }
+  }
+  .row {
+      padding: 20px 0px;
+  }
+  .single-post .blog-sidebar {
+      padding: 40px 25px;
+      margin: 20px 0 !important;
+      overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: $screen-sm-max) {
+  .row {
+      .col-6 {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-bottom: 0;
+
+          &:first-child {
+              margin-bottom: 1rem;
+          }
+      }
+      &.halfbg,&.greenbluebg {
+          .col-6 {
+              flex: 0 1 50% !important;
+              margin-bottom: 0 !important;
+              max-width: 50% !important;
+          }
+      }
+      &.halfmap {
+          .col-6 {
+              flex: 0 1 100% !important;
+              margin-bottom: 0 !important;
+              max-width: 100% !important;
+
+              > div {
+                  max-width: 540px !important;
+                  margin: 0 auto;
+              }
+              + .col-6 {
+                  height: 480px;
+              }
+          }
+      }
+  }
+  .py5 {
+      padding-top: 1rem;
+  }
   .certifiedlist{
     float: left;
     width: 100%;
@@ -320,7 +371,6 @@
       border: 0px;
       margin-left: 0px;
   }
-
   .xraycert{
       display: inline-block;
       min-width: 0px;
@@ -447,6 +497,31 @@
         max-width: 1060px;
         margin: auto;
         line-height: 1;
+    }
+    .services-horizontal {
+        .row {
+            margin: 0 15px;
+        }
+        .col-2 {
+            display: none;
+        }
+        .col-10 {
+            flex: 1 0 100%;
+            max-width: 100%;
+        }
+    }
+    .laws-resources {
+        > div {
+            text-align: center;
+        }
+        .col-2, .col-10 {
+            flex: 1 0 100%;
+            max-width: 100%;
+
+            img {
+                margin-bottom: 10px;
+            }
+        }
     }
     .g-recaptcha{
       transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;
