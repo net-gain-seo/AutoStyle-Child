@@ -1,6 +1,4 @@
 </main>
-
-
 <footer class="site-footer">
     <div class="container">
 
@@ -22,7 +20,6 @@
               © 2018 Auto Style <span>|</span> <a href="http://localhost:81/autostyle/privacy-policy/" class="privacy">Privacy Policy</a>
           </div>
         </div>
-
 
         <div class="col lg-4 col-md-4 col-sm-12 col-12 align-self-end">
           <div class="f-item contact align-self-end">
@@ -56,14 +53,9 @@
 -->
 <!-- Google Code for Remarketing Tag -->
 
-
-<div id="refContainer" class="container" style="visibility: hidden;">
-    <div class="col col-6"></div>
-</div>
 <div id="openNavOverlay"></div>
 <div id="closeNav" class="close-nav">Close <i class="fa fa-times"></i></button></div>
 <?php wp_footer(); ?>
 </div>
-
 </body>
 </html>

@@ -1,14 +1,4 @@
 @media only screen and (max-width: $screen-lg-min) {
-  .contentalign.padding100, .contentalign.padding90, .contentalign.padding80,
-  .contentalign.padding70, .contentalign.padding60, .contentalign.padding50, .contentalign.padding40, .contentalign.padding30, .contentalign.padding10{
-    padding: 0px;
-  }
-  .container-fluid {
-    .contentalign.padding100, .contentalign.padding90, .contentalign.padding80,
-    .contentalign.padding70, .contentalign.padding60, .contentalign.padding50, .contentalign.padding40, .contentalign.padding30, .contentalign.padding10{
-      padding: 25px 0px;
-    }
-  }
   .slider-content h1 {
       font-weight: bold;
       line-height: 1.6;
@@ -58,6 +48,9 @@
           top: 0;
           left: 0;
           padding: 2.5rem 0px;
+          .mast h1 {
+              margin-bottom: 0rem;
+          }
           br {
               display: none;
           }

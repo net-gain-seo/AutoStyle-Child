@@ -9,7 +9,6 @@
 
     function doResizeActions(sticky) {
 
-
         windowWidth = window.innerWidth;
         if(sticky) {
             stickAt  = $(siteHeader).innerHeight();
@@ -25,36 +24,8 @@
         // return true;
 
     }
-    function halfResize() {
-        var c6width = $('#refContainer').children('.col-6').width();
-        if($(window).innerWidth() > 558) {
-            $('.halfbg > .col-6:first-child > div').css({'width':(c6width+15)+'px','margin-left':'auto'});
-        }
-        else {
-            $('.halfbg > .col-6:first-child > div').attr('style','');
-        }
-    }
-    function halfmapResize() {
-        var c6width = $('#refContainer').children('.col-6').width();
-        if($(window).innerWidth() > 767) {
-            $('.halfmap > .col-6:first-child > div').css({'width':(c6width+15)+'px','margin-left':'auto'});
-        }
-        else {
-            $('.halfmap > .col-6:first-child > div').attr('style','');
-        }
-    }
-    function greenblueResize() {
-        var c6width = $('#refContainer').children('.col-6').width();
-        $('.greenbluebg .col-6 > div').css({'width':(c6width+15)+'px'});
-        $('.greenbluebg .col-6:first-child > div').css({'margin-left':'auto'});
-    }
-    function halfsliderResize() {
-        var c6width = $('#refContainer').children('.col-6').width();
-        $('.halfslider > .col-6:first-child > div').css({'width':(c6width+15)+'px','margin-left':'auto'});
-    }
 
     $(document).ready(function() {
-
 
         doResizeActions(true);
         if($('.halfbg').length > 0) {
@@ -75,9 +46,6 @@
             e.preventDefault();
             $('#popForm').modal('show');
         })
-
-
-
 
     });
 
@@ -108,8 +76,6 @@
     });
 
     $('#navToggle, #closeNav, #openNavOverlay').on('click', function() {
-        // console.log($(this));
-        // return false;
         if($(this).context.className != 'get-quote') {
             $(mainNav).toggleClass('open');
             $('#closeNav').toggleClass('open');
@@ -191,15 +157,6 @@
         }, 700);
     });
 
-
-
-
-
-
-
-
-
-
     /////////////////////////////Smooth Scrolling For Scroll to top/////////////////////////////////////
       $(document).ready(function(){
       //Check to see if the window is top if not then display button
@@ -234,6 +191,4 @@ $( '.woocommerce-tabs ul.tabs li a' ).click( function() {
 
     return false;
 });
-
-
 })(jQuery);
